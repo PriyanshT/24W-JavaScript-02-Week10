@@ -9,7 +9,7 @@ function Coffee(size, isDecaf, qtyCream, qtySugar) {
     this.isDecaf = isDecaf;
     this.qtyCream = qtyCream;
     this.qtySugar = qtySugar;
-    this.decaf = (this.isDecaf == true) ? "decaffeinated" : "caffeinated";
+    this.decaf = (isDecaf == true) ? "decaffeinated" : "caffeinated";
     this.description = function () {
         return `A ${this.size} sized ${this.decaf} coffee with 
         ${this.qtyCream} cream and ${this.qtySugar} sugar.`;
@@ -40,7 +40,7 @@ Then try Object.Prototype */
 instance - one based on priyanshCoffee. */
 let robertCoffee = Object.create(priyanshCoffee);
 robertCoffee.size = "large";
-robertCoffee.isDecaf = true;
+robertCoffee.isDecaf = false;
 robertCoffee.qtyCream = 1;
 robertCoffee.qtySugar = 1;
 
